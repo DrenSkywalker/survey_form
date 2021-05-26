@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+
+@import "./reset.scss";
+
+/* ------------------------------- */
+/* -------- STYLE */
+/* ------------------------------- */
+#home {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://3.bp.blogspot.com/-bA0d-ovFkL8/XEeDMECwE3I/AAAAAAAABF4/LltwFVQuffI-e3TbXXU3WJ4GkCdbdaNugCKgBGAs/w2560-h1440-c/dragon-chinese-fantasy-art-51-4k.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+
+  #header {
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    #title {
+      position: relative;
+      color: white;
+      font-size: 28px;
+      font-weight: 400;
+      font-family: "Cairo", sans-serif;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+      mix-blend-mode: overlay;
+
+      .capital-letter {
+        padding-right: 2px;
+        font-size: 32px;
+        font-family: "Playball", sans-serif;
+      }
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        top: 50%;
+        display: block;
+        background: rgba(83, 44, 76, 0.5);
+        mix-blend-mode: screen;
+      }
+    }
+
+    #description {
+      color: white;
+      font-size: 16px;
+      font-family: "Cairo", sans-serif;
+      font-style: italic;
+      line-height: 18px;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  #main {
+    width: 100%;
+    padding: 0 20px 20px 20px;
+    flex-grow: 1;
+
+    #survey-form {
+      padding: 20px;
+      background: rgba(83, 44, 76, 0.5);
+      border-radius: 20px;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+
+      .section-title {
+        position: relative;
+        color: white;
+        font-size: 20px;
+        font-family: "Cairo", sans-serif;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+
+        .capital-letter {
+          padding-right: 2px;
+          font-size: 25px;
+          font-family: "Playball", sans-serif;
+        }
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 4px;
+          position: absolute;
+          top: 50%;
+          display: block;
+          background: rgba(83, 44, 76, 0.6);
+          mix-blend-mode: overlay;
+        }
+
+        &.subtitle {
+          font-size: 17px;
+          text-transform: capitalize;
+        }
+
+        &.mt {
+          margin-top: 20px;
+        }
+      }
+
+      .input-div {
+        margin: 10px 0;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 60px auto;
+
+        .label {
+          height: 30px;
+          color: white;
+          font-size: 13px;
+          font-family: "Cairo", sans-serif;
+          text-transform: uppercase;
+          text-align: center;
+          line-height: 13px;
+          background: rgba(89, 58, 119, 1);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .input {
+          height: 30px;
+          padding: 0 10px;
+          color: white;
+          font-size: 16px;
+          font-family: "Cairo", sans-serif;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+          background: rgba(255, 255, 255, 0.1);
+          outline: none;
+          border: 0;
+
+          &::placeholder {
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+          }
+
+          &.select {
+            appearance: none;
+            background-image: url("../img/arrow_dropdown.svg");
+            background-repeat: no-repeat;
+            background-position: right;
+
+            &:focus {
+              background: rgba(83, 44, 76, 1);
+            }
+          }
+
+          &.checkbox {
+            margin: auto;
+          }
+        }
+
+        &.flex {
+          height: auto;
+          row-gap: 10px;
+          grid-template: repeat(1, auto) / 90px auto 90px auto;
+        }
+
+        &.area {
+          height: 150px;
+          display: flex;
+          justify-content: center;
+
+          .lore {
+            width: 100%;
+            height: 100%;
+            padding: 5px 10px;
+            font-size: 12px;
+            color: white;
+            font-size: 14px;
+            font-family: "Cairo", sans-serif;
+            resize: none;
+          }
+        }
+      }
+
+      .wrapper-row {
+        margin: 15px 0;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 60px auto;
+
+        .input-div {
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .submit-button {
+        width: 100%;
+        height: 30px;
+        margin-top: 5px;
+        padding: 0 5px;
+        color: white;
+        font-size: 13px;
+        font-family: "Cairo", sans-serif;
+        text-transform: uppercase;
+        background: rgba(89, 58, 119, 1);
+        border: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  #bottom-bar {
+    width: 100%;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      width: 20px;
+      fill: rgba(83, 44, 76, 1);
+    }
+  }
+}
+
+/* ------------------------------- */
+/* -------- @MEDIA */
+/* ------------------------------- */
+@media screen and (min-width: 425px) {
+  #home {
+    #main {
+      #survey-form {
+        .input-div {
+          &.flex {
+            &.small {
+              grid-template: repeat(1, auto) / 60px auto 60px auto 60px auto 60px auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #home {
+    #header {
+      #title {
+        font-size: 36px;
+
+        .capital-letter {
+          font-size: 40px;
+        }
+      }
+
+      #description {
+        font-size: 20px;
+      }
+    }
+
+    #main {
+      width: 550px;
+      margin: auto;
+      #survey-form {
+        .input-div {
+          &.flex {
+            grid-template: repeat(1, auto) / 90px auto 90px auto 90px auto;
+          }
+        }
+      }
+    }
+  }
+}

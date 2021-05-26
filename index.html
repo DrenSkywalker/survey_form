@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG Survey Form</title>
+</head>
+
+<link rel="stylesheet" href="css/index.css" type="text/css">
+
+<body>
+
+  <div id="home">
+
+    <!-- HEADER -->
+    <header id="header">
+      <h1 id="title">
+        <span class="capital-letter">M</span>inimal
+        <span class="capital-letter">C</span>haracter
+        <span class="capital-letter">S</span>heet
+      </h1>
+      <p id="description">
+        A minimal character sheet</br>
+        for your quick RPG adventures!
+      </p>
+    </header>
+
+    <!-- MAIN -->
+    <main id="main">
+
+      <form action="" id="survey-form">
+
+        <!-- Personal Information -->
+        <h2 class="section-title">
+          <span class="capital-letter">P</span>ersonal
+          <span class="capital-letter">I</span>nformations
+        </h2>
+
+        <div class="input-div">
+          <label for="name" id="name-label" class="label">Name</label>
+          <input type="text" name="name" id="name" class="input" placeholder="Write your name here!" required>
+        </div>
+
+        <div class="input-div">
+          <label for="email" id="email-label" class="label">Email</label>
+          <input type="email" name="email" id="email" class="input" placeholder="Enter a valid e-mail!" required>
+        </div>
+
+        <!-- Character Information -->
+        <h2 class="section-title mt">
+          <span class="capital-letter">C</span>haracter
+          <span class="capital-letter">I</span>nformations
+        </h2>
+
+        <!-- Character Name -->
+        <div class="input-div">
+          <label for="character" id="character-label" class="label">Name</label>
+          <input type="character" name="character" id="character" class="input" placeholder="Your character's name!">
+        </div>
+
+        <!-- Age and Ethic -->
+        <div class="wrapper-row">
+          <div class="input-div">
+            <label for="number" id="number-label" class="label">Age</label>
+            <input type="number" name="number" id="number" class="input" min="10" max="100" placeholder="10-100"
+              required>
+          </div>
+
+          <div class="input-div">
+            <label for="dropdown" id="dropdown-label" class="label">Alignment</label>
+            <select name="dropdown" id="dropdown" class="input select">
+              <option value="" disabled selected>Select your alignment</option>
+              <option value="lg">Legal Good</option>
+              <option value="ln">Legal Neutral</option>
+              <option value="le">Legal Evil</option>
+              <option value="ng">Neutral Good</option>
+              <option value="nn">Pure Neutral</option>
+              <option value="ne">Neutral Evil</option>
+              <option value="cg">Chaotic Good</option>
+              <option value="cn">Chaotic Neutral</option>
+              <option value="ce">Chaotic Evil</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Race -->
+        <div class="input-div">
+          <label for="race" id="race-label" class="label">Race</label>
+          <select name="race" id="race" class="input select">
+            <option value="" disabled selected>Select your race</option>
+            <option value="Aasimar">Aasimar</option>
+            <option value="Dwarf">Dwarf</option>
+            <option value="Elf">Elf</option>
+            <option value="Human">Human</option>
+            <option value="Ifrit">Ifrit</option>
+            <option value="Orc">Orc</option>
+            <option value="Oread">Oread</option>
+            <option value="Sylph">Sylph</option>
+            <option value="Tiefling">Tiefling</option>
+            <option value="Undine">Undine</option>
+          </select>
+        </div>
+
+        <!-- Class -->
+        <div class="input-div">
+          <label for="class" id="class-label" class="label">Class</label>
+          <select name="class" id="class" class="input select">
+            <option value="" disabled selected>Select your class</option>
+            <option value="Alchemist">Alchemist</option>
+            <option value="Bard">Bard</option>
+            <option value="Cleric">Cleric</option>
+            <option value="Druid">Druid</option>
+            <option value="Magus">Magus</option>
+            <option value="Paladin">Paladin</option>
+            <option value="Ranger">Ranger</option>
+            <option value="Rogue">Rogue</option>
+            <option value="Summoner">Summoner</option>
+            <option value="Wizard">Wizard</option>
+          </select>
+        </div>
+
+        <!-- Elements -->
+        <h2 class="section-title subtitle mt">Primary Element</h2>
+
+        <div class="input-div flex small">
+          <label for="fire" class="label">Fire</label>
+          <input type="radio" id="fire" name="element-primary" value="fire" class="input checkbox" checked>
+          <label for="water" class="label">Water</label>
+          <input type="radio" id="water" name="element-primary" value="water" class="input checkbox">
+          <label for="earth" class="label">Earth</label>
+          <input type="radio" id="earth" name="element-primary" value="earth" class="input checkbox">
+          <label for="air" class="label">Air</label>
+          <input type="radio" id="air" name="element-primary" value="air" class="input checkbox">
+        </div>
+
+        <h2 class="section-title subtitle mt">Secondary Element</h2>
+
+        <div class="input-div flex small">
+          <label for="magma" class="label">Magma</label>
+          <input type="radio" id="magma" name="element-secondary" value="magma" class="input checkbox" checked>
+          <label for="ice" class="label">Ice</label>
+          <input type="radio" id="ice" name="element-secondary" value="ice" class="input checkbox">
+          <label for="nature" class="label">Nature</label>
+          <input type="radio" id="nature" name="element-secondary" value="nature" class="input checkbox">
+          <label for="electro" class="label">Electro</label>
+          <input type="radio" id="electro" name="element-secondary" value="electro" class="input checkbox">
+        </div>
+
+        <!-- Skills -->
+        <h2 class="section-title subtitle mt">Skills</h2>
+
+        <div class="input-div flex">
+          <label for="acrobatics" class="label">Acrobatics</label>
+          <input type="checkbox" id="acrobatics" name="skill" value="acrobatics" class="input checkbox">
+          <label for="appraise" class="label">Appraise</label>
+          <input type="checkbox" id="appraise" name="skill" value="appraise" class="input checkbox">
+          <label for="bluff" class="label">Bluff</label>
+          <input type="checkbox" id="bluff" name="skill" value="bluff" class="input checkbox">
+          <label for="craft" class="label">Craft</label>
+          <input type="checkbox" id="craft" name="skill" value="craft" class="input checkbox">
+          <label for="diplomacy" class="label">Diplomacy</label>
+          <input type="checkbox" id="craft" diplomacy="skill" value="diplomacy" class="input checkbox">
+          <label for="disable-device" class="label">Disable Device</label>
+          <input type="checkbox" id="disable-device" name="skill" value="disable-device" class="input checkbox">
+          <label for="fly" class="label">Fly</label>
+          <input type="checkbox" id="fly" name="skill" value="fly" class="input checkbox">
+          <label for="handle-animal" class="label">Handle Animal</label>
+          <input type="checkbox" id="handle-animal" name="skill" value="handle-animal" class="input checkbox">
+          <label for="heal" class="label">Heal</label>
+          <input type="checkbox" id="heal" name="skill" value="heal" class="input checkbox">
+          <label for="intimidate" class="label">Intimidate</label>
+          <input type="checkbox" id="intimidate" name="skill" value="intimidate" class="input checkbox">
+          <label for="knowledge" class="label">Knowledge</label>
+          <input type="checkbox" id="knowledge" name="skill" value="knowledge" class="input checkbox">
+          <label for="linguistic" class="label">Linguistic</label>
+          <input type="checkbox" id="linguistic" name="skill" value="linguistic" class="input checkbox">
+          <label for="perception" class="label">Perception</label>
+          <input type="checkbox" id="perception" name="skill" value="perception" class="input checkbox">
+          <label for="perform" class="label">Perform</label>
+          <input type="checkbox" id="perform" name="skill" value="perform" class="input checkbox">
+          <label for="profession" class="label">Profession</label>
+          <input type="checkbox" id="profession" name="skill" value="profession" class="input checkbox">
+          <label for="ride" class="label">Ride</label>
+          <input type="checkbox" id="ride" name="skill" value="ride" class="input checkbox">
+          <label for="sleight-of-hand" class="label">Sleight of Hand</label>
+          <input type="checkbox" id="sleight-of-hand" name="skill" value="sleight-of-hand" class="input checkbox">
+          <label for="spellcraft" class="label">Spellcraft</label>
+          <input type="checkbox" id="spellcraft" name="skill" value="spellcraft" class="input checkbox">
+          <label for="stealth" class="label">Stealth</label>
+          <input type="checkbox" id="stealth" name="skill" value="stealth" class="input checkbox">
+          <label for="survival" class="label">survival</label>
+          <input type="checkbox" id="survival" name="skill" value="survival" class="input checkbox">
+          <label for="swim" class="label">Swim</label>
+          <input type="checkbox" id="swim" name="skill" value="swim" class="input checkbox">
+        </div>
+
+        <!-- Lore -->
+        <h2 class="section-title subtitle mt">Character Lore</h2>
+
+        <div class="input-div area">
+          <textarea name="lore" id="lore" class="input lore" cols="30" rows="10"
+            placeholder="Write your character's lore here!"></textarea>
+        </div>
+
+        <input type="submit" id="submit" class="submit-button">
+
+      </form>
+
+    </main>
+
+    <div id="bottom-bar">
+      <svg version="1.1" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" viewBox="0 0 391.837 391.837" xml:space=" preserve">
+        <g>
+          <path d="M285.257,35.528c58.743,0.286,106.294,47.836,106.58,106.58
+		c0,107.624-195.918,214.204-195.918,214.204S0,248.165,0,142.108c0-58.862,47.717-106.58,106.58-106.58l0,0
+		c36.032-0.281,69.718,17.842,89.339,48.065C215.674,53.517,249.273,35.441,285.257,35.528z" />
+        </g>
+      </svg>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
